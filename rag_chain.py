@@ -147,6 +147,8 @@ Exemples de BON style (À SUIVRE):
 
 RÉPONDS UNIQUEMENT À LA QUESTION POSÉE en utilisant le contexte fourni. Ne dévie pas du sujet. 
 
+CITE TOUTES LES SOURCES PERTENANTES POUR RÉPONDRE À LA QUESTION.
+
 Réponse:"""
         
         return PromptTemplate(

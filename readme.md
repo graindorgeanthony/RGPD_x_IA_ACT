@@ -25,10 +25,7 @@ ollama pull gemma3:4b
 # 3. Placer les PDFs dans knowledge_base/
 # (RGPD.pdf et IA_ACT.pdf)
 
-# 4. Vérifier l'installation
-python check_setup.py
-
-# 5. Lancer l'application
+# 4. Lancer l'application
 bash run.sh
 ```
 
@@ -36,15 +33,15 @@ bash run.sh
 
 ## 🔧 Technologies Utilisées
 
-| Composant | Technologie | Version | Rôle |
-|-----------|-------------|---------|------|
-| **LLM Local** | Ollama (gemma3:4b) | 0.4.2 | Génération de réponses avec streaming |
-| **Framework RAG** | LangChain | 0.3.7+ | Orchestration du pipeline RAG |
-| **Base Vectorielle** | ChromaDB | 0.5.3 | Stockage des embeddings |
-| **Embeddings** | Sentence Transformers | 3.1.1 | Vectorisation sémantique |
-| **Interface** | Streamlit | 1.41.0 | Interface web moderne et réactive |
-| **Chargement PDF** | PyMuPDF | 1.25.2+ | Extraction intelligente du texte |
-| **Formatage** | Markdown | 3.7 | Rendu élégant des réponses |
+| Composant | Technologie | Rôle |
+|-----------|-------------|------|
+| **LLM Local** | Ollama (gemma3:4b) | Génération de réponses avec streaming |
+| **Framework RAG** | LangChain | Orchestration du pipeline RAG |
+| **Base Vectorielle** | ChromaDB | Stockage des embeddings |
+| **Embeddings** | Sentence Transformers | Vectorisation sémantique |
+| **Interface** | Streamlit | Interface web moderne et réactive |
+| **Chargement PDF** | PyMuPDF | Extraction intelligente du texte |
+| **Formatage** | Markdown | Rendu des réponses |
 
 ## 📋 Prérequis
 
@@ -111,20 +108,6 @@ Placez vos PDFs dans le dossier `knowledge_base/` :
 > - RGPD : [https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32016R0679)
 > - IA Act : [https://artificialintelligenceact.eu/](https://artificialintelligenceact.eu/)
 
-### 🔍 Vérification de l'installation
-
-Une fois l'installation terminée, vérifiez que tout est correctement configuré :
-
-```bash
-python check_setup.py
-```
-
-Ce script vérifie :
-- ✅ Version de Python
-- ✅ Dépendances installées
-- ✅ Ollama et modèle gemma3:4b
-- ✅ Documents PDF présents
-- ✅ Serveur Ollama actif
 
 ## 📊 Utilisation
 
@@ -267,7 +250,6 @@ RGPD_x_IA_ACT/
 ├── rag_chain.py            # Chaîne RAG avec citations inline
 ├── indexer.py              # Script d'indexation intelligente
 ├── config.py               # Configuration centralisée
-├── check_setup.py          # Vérification de l'installation
 ├── requirements.txt        # Dépendances Python
 ├── setup.sh                # Script d'installation automatique
 ├── run.sh                  # Script de lancement rapide
@@ -429,9 +411,6 @@ python config.py
 ➡️ Augmentez `CHUNK_OVERLAP` dans `config.py` (essayez 500-600)
 ➡️ Réindexez avec `python indexer.py`
 
-### Diagnostic complet
-➡️ Utilisez le script de vérification : `python check_setup.py`
-
 ## 🎓 Compétences Démontrées
 
 Ce projet démontre une maîtrise technique avancée :
@@ -453,7 +432,7 @@ Ce projet démontre une maîtrise technique avancée :
 ### Développement et UX
 - ✅ **Interface web moderne** (Streamlit) avec design élégant
 - ✅ **Configuration centralisée** pour faciliter la personnalisation
-- ✅ **Scripts d'automatisation** (setup.sh, run.sh, check_setup.py)
+- ✅ **Scripts d'automatisation** (setup.sh, run.sh)
 - ✅ **Gestion d'erreurs robuste** avec messages explicites
 - ✅ **Markdown rendering** pour réponses structurées
 
@@ -479,4 +458,3 @@ Pour toute question ou amélioration, n'hésitez pas à ouvrir une issue ou une 
 ---
 
 **Développé avec ❤️ pour la conformité, la confidentialité et l'innovation responsable**
-
